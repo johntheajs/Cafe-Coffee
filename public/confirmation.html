@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cafe</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/b159867ba9.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+        <script src="app.js"></script>
+        
+        <style>
+
+            
+#confirm {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#confirm h1 {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  margin: 0;
+}
+
+#confirm h2 {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+#confirm ul {
+  list-style: none;
+  padding: 0;
+}
+
+#confirm li {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+#confirm p {
+  text-align: right;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+
+
+        </style>
+
+    </head
+    <body ng-controller="ConfirmationController">
+        <section id="header">
+            <a href="#"><img src="image/cafe-logo.jpg" class="logo" alt="" width="70px" height="70px"></a>
+            <div>
+                <nav>
+                    <ul id="navbar">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Explore</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a class="active" href="confirmation.html">Confirmation</a></li>
+                        <li><div id="searchBar">
+                            <form action="">
+                                <label for=""><input type="text" placeholder="Enter a coffee"></label>
+                                <button>Search</button>
+                            </form>
+                        </div></li> 
+                    </ul>
+                </nav>
+            </div>
+            
+        </section>
+
+        <section id="confirm">
+        <h1>Order Confirmation</h1>
+  <h2>Order Details</h2>
+  <ul>
+    <li ng-repeat="item in order.items">
+      {{ item.name }} - Quantity: {{ item.quantity }} - Price: {{ item.price }}
+    </li>
+  </ul>
+  <p>Total Price: {{ order.totalPrice }}</p>
+        </section>
+        
+
+        <footer class="section-p1">
+            <div class="sing-col">
+            <div class="col">
+                <img class="logo" src="img/logo.png" alt="">
+                <h4>Contact</h4>
+                <p><strong>Address: </strong> 562 Wellington Road, Street 32, San Francisco</p>
+                <p><strong>Phone: </strong> +01 2222 365 /(+91) 01 2345 6789</p>
+                <p><strong>Hours: </strong> 10:00 - 18:00, Mon - Sat</p>
+                <div class="follow">
+                    <h4>Follow us</h4>
+                    <div class="icon">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-pinterest-p"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="#">About Us</a>
+                <a href="#">Delivery Instructions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">My Wishlist</a>
+                <a href="#">Track My Order</a>
+                <a href="#">Help</a>
+            </div>
+            <div class="col install">
+                <h4>Install App</h4>
+                <p>From App Store or Google Play</p>
+                <div class="row">
+                    <img src="image/app.jpg" alt="">
+                    <img src="image/play.jpg" alt="">
+                </div>
+                <p>Secured Payment Gateways</p>
+                <img src="image/pay.png" alt="">
+            </div>
+            </div>
+            <div class="copyright">
+                <p>C 2021, Tech2 etc - HTML CSS Ecommerce Template</p>
+            </div>
+        </footer>
+    </body>
+</html>
